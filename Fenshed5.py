@@ -99,7 +99,6 @@ print("You have succesfully completed Sean's Game quiz!")
 print(name,"Your final score is", score,"out of",total)
 print("That means you answered", (round(score/total*100,2)),"% of the questions correctly!")
 print("Thanks for playing")
-time.sleep(8)
 exit()
 
 

@@ -20,13 +20,27 @@ gkquiz = [
 ['What’s the national flower of Japan?',
  {'answer':'a','option':'a.Cherry blossom\n b.Peony\n c.Orchid\n d.Lily'}],
 ]
-#Name 
-print ("Welcom to the Quiz")
-while True:     
+#Name Age 
+print ("Welcome to the Quiz")
+
+while True:
     name = input("what is your name : ")
-    if name.isalpha():        
+    if name.replace(' ','').isalpha():
         break
-    print("q.py  characters A-Z onle")
+    print("please enter characters A-Z onle")
+
+def age():
+    while True:
+        age = input("\nPlease enter your age : ")
+        if age.replace(' ','').isnumeric():#using replace to allow spaces after the answer
+            if 6< int(age)<101: #allowing age till 7 to 100 only
+                break
+            else:
+                print('You need to be 7 to 100')
+        else:
+            print("The data type you have used is invalid data type.\n")
+
+age()
 #Rules
 rule = input("Please enter y if you wamt to read the rules\nor any other key if you want to exit:")
 

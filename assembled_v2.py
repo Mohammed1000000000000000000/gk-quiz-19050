@@ -1,34 +1,34 @@
 from random import shuffle
 
 gkquiz = [
-['What is the most famous song in 2020?',
+['\nWhat is the most famous song in 2020?',
  {'answer':'c','option':'a.Despasito\nb.closer\nc.shape of you\nd.Roses'}
  ],
-['what is the most known anime seare in 2020?',
+['\nWhat is the most known anime seare in 2020?',
  {'answer':'a','option':'a.Pokemon\nb.Naruto\nc.Attack on Titan\nd.Great Pretender'}
  ],
-['what is the meost popular movies in 2020?',
+['\nWhat is the meost popular movies in 2020?',
  {'answer': 'b','option':'a.Parasite\nb.The Dark Knight\nc.Roma\nd.Beanpole'}
  ],
-['How many players are on a volleyball court?',
+['\nHow many players are on a volleyball court?',
  {'answer':'d','option':'a.3\nb.6\nc.2\nd.12'}
  ],
-['How many time zones are there in Russia?',
+['\nHow many time zones are there in Russia?',
  {'answer':'a','option':'a.11\nb.13\nc.1\nd.10'}
  ],
-['What’s the national animal of Australia?',
+['\nWhat’s the national animal of Australia?',
  {'answer':'a','option':'a.Red Kangaroo\nb.Dingo\nc.Platypus\nd.Rainbow Lorikeet'}
  ],
-['Name the best-selling book series of the 21st century?',
+['\nName the best-selling book series of the 21st century?',
  {'answer':'c','option':'a.Beloved\nb.The Great Gatsby\nc.Harry Potter\nd.Beloved'}
  ],
-['Name the longest river in the world?',
+['\nName the longest river in the world?',
  {'answer':'a','option':'a.The Nile\nb.Amazon Riverdel gkquiz[0]\nc.Paraná River\nd.Irtysh River'}
  ],
-['How many stripes are there on the US flag?',
+['\nHow many stripes are there on the US flag?',
  {'answer':'c','option':'a.10\nb.12\nc.13\nd.20'}
  ],
-['What’s the national flower of Japan?',
+['\nWhat’s the national flower of Japan?',
  {'answer':'a','option':'a.Cherry blossom\nb.Peony\nc.Orchid\nd.Lily'}
  ],
 ]
@@ -59,9 +59,10 @@ def age():
 
 def rules():
     while True:
-        rules = input("Please enter y to continue or any other key to exit.").lower()
+        rules = input("\nPlease enter y to continue or any other key to exit : ").lower()
         if rules == "y" or rules == "yes" or rules == "yea":
-            print("You will be given a question and Multiple ansers\nand you have to choose the right anser\nPles anser the question with a,b,c or d and enjoy your time : ")
+            print("You will be given a question and Multiple ansers\nand you have to choose the right anser\nPles anser the question with a,b,c or d and enjoy your time")
+            break
         else:
             print("Thank you for using our quiz")
             exit()
@@ -71,9 +72,7 @@ def rules():
 #What if the user is not ready
 def status():
     while True:
-        status = input("Are you ready to take the quiz :{}?: \na. Yes \nb. No \n=>".format(name))
-
-
+        status = input("\nAre you ready to take the quiz :{}?: \na. Yes \nb. No \n=> : ")
         if status == 'No' or status == 'no' or status == 'n' or status == 'N': 
             print("See you next time.")
             exit()
@@ -81,6 +80,7 @@ def status():
         #what if the user is ready
         else:
             print("Welcome to the quiz.")
+            break
 name()
 age()
 rules()
@@ -125,3 +125,6 @@ print(name,"Your final score is", score,"out of",total)
 print("That means you answered", (round(score/total*100,2)),"% of the questions correctly!")
 print("Thanks for playing")
 exit()
+
+
+      

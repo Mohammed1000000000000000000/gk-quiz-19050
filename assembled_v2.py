@@ -39,11 +39,12 @@ shuffle(gkquiz)
 #Name Age 
 print ("Welcome to the Quiz")
 
-while True:
-    name = input("what is your name : ")
-    if name.replace(' ','').isalpha():
-        break
-    print("please enter characters A-Z onle")
+def name(): 
+    while True:
+        name = input("what is your name : ")
+        if name.replace(' ','').isalpha():
+            break
+        print("please enter characters A-Z only")
 
 def age():
     while True:
@@ -55,26 +56,38 @@ def age():
                 print('You need to be 7 to 100')
         else:
             print("The data type you have used is invalid data type.\n")
-#Rules
-rule = input("Please enter y if you wamt to read the rules\nor any other key if you dont want to read :")
 
-if rule ==  'Y' or rule  ==  'y' or  rule == 'Yes' or rule == 'yes':
-    print("You will be given a question and Multiple ansers\nand you have to choose the right anser\nPlease answer the question with a,b,c or d and enjoy your time : ")
-    
-else:
-    print("enjoy yor time")
+def rules():
+    while True:
+        rules = input("Please enter y to continue or any other key to exit.").lower()
+        if rules == "y" or rules == "yes" or rules == "yea":
+            print("You will be given a question and Multiple ansers\nand you have to choose the right anser\nPles anser the question with a,b,c or d and enjoy your time : ")
+        else:
+            print("Thank you for using our quiz")
+            exit()
+            
 
 #Ask if they are ready to take the quiz
-status = input("Are you ready to take the quiz :{}?: \na. Yes \nb. No \n=>".format(name))
-
 #What if the user is not ready
-if status == 'No' or status == 'no' or status == 'n' or status == 'N': 
-    print("See you next time.")
-    exit()
-    
-#what if the user is ready
-else:
-    print("Welcome to the quiz.")
+def status():
+    while True:
+        status = input("Are you ready to take the quiz :{}?: \na. Yes \nb. No \n=>".format(name))
+
+
+        if status == 'No' or status == 'no' or status == 'n' or status == 'N': 
+            print("See you next time.")
+            exit()
+            
+        #what if the user is ready
+        else:
+            print("Welcome to the quiz.")
+name()
+age()
+rules()
+status()
+
+
+
 
 index = 0
 score = 0
@@ -112,6 +125,3 @@ print(name,"Your final score is", score,"out of",total)
 print("That means you answered", (round(score/total*100,2)),"% of the questions correctly!")
 print("Thanks for playing")
 exit()
-
-
-      

@@ -1,5 +1,5 @@
 from random import shuffle
-
+#Qushtens
 gkquiz = [
 ['\nWhat is the most famous song in 2020?',
  {'answer':'c','option':'a.Despasito\nb.closer\nc.shape of you\nd.Roses'}
@@ -36,7 +36,7 @@ gkquiz = [
 shuffle(gkquiz)
 
 
-#Name Age 
+#Fucshens for Name and Age 
 print ("Welcome to the Quiz")
 
 def name(): 
@@ -56,7 +56,7 @@ def age():
                 print('You need to be 7 to 100')
         else:
             print("The data type you have used is invalid data type.\n")
-
+#Asking if thay need to red the rules
 def rules():
     while True:
         rules = input("\nPlease enter y to continue or any other key to exit : ").lower()
@@ -81,6 +81,7 @@ def status():
         else:
             print("Welcome to the quiz.")
             break
+#caling all of the fucshens above       
 name()
 age()
 rules()
@@ -88,7 +89,7 @@ status()
 
 
 
-
+#Asking qushtens 
 index = 0
 score = 0
 optnum = 0
@@ -118,7 +119,7 @@ while len(gkquiz)>0:
             del gkquiz [0]
             break
         else:
-            print("Enter your answer in a,b,c,d")
+            print("Enter your answer in a,b,c,d")            
 
 print("You have succesfully completed Mohammed's Game quiz!")
 print(name,"Your final score is", score,"out of",total)

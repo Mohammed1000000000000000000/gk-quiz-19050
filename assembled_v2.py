@@ -39,11 +39,7 @@ gkquiz = [
  ],
 ]
 
-shuffle(gkquiz)
-
-
-#Function for Name and Age 
-print ("Welcome to the Quiz")
+#functions
 
 def name(): 
     while True:
@@ -72,7 +68,7 @@ def rules():
         else:
             print("Thank you for using our quiz")
             exit()
-            
+
 
 #Ask if they are ready to take the quiz
 #What if the user is not ready
@@ -86,16 +82,19 @@ def status():
         #what if the user is ready
         else:
             print("Welcome to the quiz.")
+
+
             break
+            
+#Program starts
+shuffle(gkquiz)
+#Function for Name and Age 
+print ("Welcome to the Quiz")
 #caling all of the functions above       
 name()
 age()
 rules()
 status()
-
-
-
-
 while len(gkquiz)>0:
     data = gkquiz[0]
     j = data[0]

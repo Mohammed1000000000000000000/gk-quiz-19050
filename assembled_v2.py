@@ -1,5 +1,11 @@
 from random import shuffle
-#Qushtens
+#Asking questions
+index = 0
+score = 0
+optnum = 0
+total=10
+j=""
+#Questions
 gkquiz = [
 ['\nWhat is the most famous song in 2020?',
  {'answer':'c','option':'a.Despasito\nb.closer\nc.shape of you\nd.Roses'}
@@ -36,7 +42,7 @@ gkquiz = [
 shuffle(gkquiz)
 
 
-#Fucshens for Name and Age 
+#Function for Name and Age 
 print ("Welcome to the Quiz")
 
 def name(): 
@@ -50,13 +56,13 @@ def age():
     while True:
         age = input("\nPlease enter your age : ")
         if age.replace(' ','').isnumeric():#using replace to allow spaces after the answer
-            if 6< int(age)<101: #allowing age till 7 to 100 only
+            if 6< int(age)<101: #allowing age from 7 to 100 only
                 break
             else:
                 print('You need to be 7 to 100')
         else:
             print("The data type you have used is invalid data type.\n")
-#Asking if thay need to red the rules
+#Asking if thay need to read the rules
 def rules():
     while True:
         rules = input("\nPlease enter y to continue or any other key to exit : ").lower()
@@ -81,7 +87,7 @@ def status():
         else:
             print("Welcome to the quiz.")
             break
-#caling all of the fucshens above       
+#caling all of the functions above       
 name()
 age()
 rules()
@@ -89,12 +95,7 @@ status()
 
 
 
-#Asking qushtens 
-index = 0
-score = 0
-optnum = 0
-total=10
-j=""
+
 while len(gkquiz)>0:
     data = gkquiz[0]
     j = data[0]
@@ -126,6 +127,3 @@ print(name,"Your final score is", score,"out of",total)
 print("That means you answered", (round(score/total*100,2)),"% of the questions correctly!")
 print("Thanks for playing")
 exit()
-
-
-      
